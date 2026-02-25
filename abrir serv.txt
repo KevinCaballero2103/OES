@@ -1,0 +1,2 @@
+cd oes-app
+npm run dev
