@@ -17,7 +17,7 @@ const deportesPorDivision = {
   ],
 }
 
-function TarjetaDeporte({ nombre, icono: Icono, color, categorias, ruta, division }) {
+function TarjetaDeporte({ nombre, color, categorias, ruta, division }) {
   const navigate = useNavigate()
 
   const handleClick = () => {
@@ -31,9 +31,13 @@ function TarjetaDeporte({ nombre, icono: Icono, color, categorias, ruta, divisio
   return (
     <div
       onClick={handleClick}
-      className={`${color} rounded-2xl p-6 cursor-pointer hover:scale-105 transition-transform duration-200 shadow-xl`}
+      className={`${color} rounded-2xl p-6 cursor-pointer hover:scale-105 transition-transform duration-200 shadow-xl relative overflow-hidden`}
     >
-      <Icono size={40} className="mb-3" />
+      <img
+        src={`https://placehold.co/120x160/ffffff10/ffffff40?text=`}
+        alt=""
+        className="absolute right-0 bottom-0 h-36 opacity-0"
+      />
       <h2 className="text-2xl font-black uppercase tracking-wide mb-3">{nombre}</h2>
       <div className="flex gap-2 flex-wrap">
         {categorias.map(cat => (
