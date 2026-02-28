@@ -6,6 +6,7 @@ import Login from './components/admin/Login'
 import Dashboard from './components/admin/Dashboard'
 import Partidos from './components/admin/Partidos'
 import EnVivo from './components/admin/EnVivo'
+import Partido from './components/Partido'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/partidos" element={<Partidos />} />
         <Route path="/admin/envivo" element={<EnVivo />} />
+        <Route path="/partido/:id" element={<Partido />} />
       </Routes>
     </div>
   )
